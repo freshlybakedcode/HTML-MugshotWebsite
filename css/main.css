@@ -4,11 +4,12 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
-    background: url(../img/phone-on-table-with-coffee-mobile.jpg) no-repeat 38% center fixed;
+    background: url(../img/phone-on-table-with-coffee-mobile.jpg) no-repeat 38% center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 100%;
 }
 
 ::-moz-selection {
@@ -123,7 +124,7 @@ h2 {
 }
 .page-third {
   /*background: url(../img/phone-in-hand.jpg) no-repeat center center fixed;*/
-  background: url(../img/phone-in-hand-with-coffee-mobile.jpg) no-repeat 70% center fixed;
+  background: url(../img/phone-in-hand-with-coffee-mobile.jpg) no-repeat 70% center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
