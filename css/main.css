@@ -101,7 +101,13 @@ h2 {
   font-size: 2em;
   line-height: 1.2em;
   margin: 0;
-  align-self: flex-start;
+  align-self: center;
+}
+.text-bold {
+  font-weight: 400;
+}
+.text-hidden {
+  display: none;
 }
 .page {
   display: flex;
@@ -125,6 +131,10 @@ h2 {
   overflow: auto;
   padding-top: 30vh;
   height: 60vh;
+}
+.screenshot-text-section {
+  display: flex;
+  flex-direction: column;
 }
 .mugshot-logo {
   background: url(../img/mugshot-camera.png) no-repeat;
@@ -150,7 +160,7 @@ h2 {
   background-size: contain;
   width: 80vw;
   height: 35vw;
-  max-width: 646px;
+  max-width: 340px;
   display: block;
   margin: 0 auto;
 }
@@ -159,7 +169,7 @@ h2 {
   background-size: contain;
   width: 80vw;
   height: 35vw;
-  max-width: 646px;
+  max-width: 340px;
   display: block;
   margin: 0 auto;
 }
@@ -200,16 +210,10 @@ h2 {
 }
 
 @media only screen and (min-width: 480px) {
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-    nav ul li {
-        display: inline;
-    }
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
+  .add-drink {
+    width: 300px;
+    height: 634px;
+  }
 }
 
 @media only screen and (min-width: 600px) {   /*Background changes*/
@@ -223,12 +227,32 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
-  h2 {
-    align-self: center;
-  }
   .wrapper {
     width: 84%;
     margin: 0 8%;
+  }
+  .screenshot-text-section {
+    flex-direction: row;
+  }
+  .add-drink {
+    flex: 1;
+    height: 52vw;
+    max-height: 500px;
+  }
+  .add-drink {
+    order: 1;
+  }
+  .text-1 {
+    order: 2;
+    flex: 2;
+    padding: 0 2em 0 6em;
+  }
+  .text-2 {
+    display: none;
+  }
+  .text-hidden {
+    display: flex;
+    margin-top: 2em;
   }
   .page-third {
     background: url(../img/phone-in-hand-with-coffee.jpg) no-repeat center center fixed;
@@ -237,6 +261,14 @@ h2 {
     -o-background-size: cover;
     background-size: cover;
   }
+  .apple-store-badge,
+  .google-play-badge {
+    height: 20vh;
+  }
+  .footer-container {
+    justify-content: flex-start;
+    padding-left: 3em;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -244,8 +276,13 @@ h2 {
     Maximal Width
    =============== */
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 900px; 
         margin: 0 auto;
+    }
+    h2 {
+    }
+    body {
+      font-size: 20px;
     }
 }
 
