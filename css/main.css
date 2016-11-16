@@ -276,13 +276,19 @@ h2 {
     Maximal Width
    =============== */
     .wrapper {
-        width: 900px; 
+        width: 900px;
         margin: 0 auto;
     }
     h2 {
     }
     body {
       font-size: 20px;
+    }
+    .add-drink {
+      max-height: 580px;
+    }
+    .text-1 {
+      padding: 0 2em 0 4em;
     }
 }
 
