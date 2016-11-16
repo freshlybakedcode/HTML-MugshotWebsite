@@ -62,7 +62,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px 'Open sans', Helvetica, Helvetica Neue, Arial;
+    font: 16px/1.8em 'Open sans', Helvetica, Helvetica Neue, Arial;
     color: #222636;
     font-weight: 300;
 }
@@ -72,7 +72,6 @@ body {
     margin: 0 5%;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 /* ===============
@@ -95,18 +94,18 @@ h1 {
   background: rgba(36,39,50,0.93);
   padding: 10px;
   font-weight: 300;
+  align-self: center;
 }
 h2 {
   font-weight: 300;
   font-size: 2em;
   line-height: 1.2em;
   margin: 0;
-  /*text-align: center;*/
+  align-self: flex-start;
 }
 .page {
   display: flex;
   justify-content: center;
-  min-height: 60vh;
 }
 .page-first {
   align-items: center;
@@ -117,29 +116,49 @@ h2 {
   padding: 50px 0 0 0;
 }
 .page-third {
-  background: url(../img/phone-in-hand.jpg) no-repeat center center fixed;
+  /*background: url(../img/phone-in-hand.jpg) no-repeat center center fixed;*/
+  background: url(../img/phone-in-hand-with-coffee-mobile.jpg) no-repeat 70% center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: auto;
   padding-top: 30vh;
+  height: 60vh;
 }
 .mugshot-logo {
   background: url(../img/mugshot-camera.png) no-repeat;
   background-size: contain;
-  width: 70vw;
-  height: 53vw;
-  max-width: 400px;
+  width: 71vw;
+  height: 61vw;
+  max-width: 330px;
+  max-height: 283px;
+  display: block;
+  margin: 0px auto -15px auto;
+}
+.add-drink {
+  background: url(../img/add-drink.png) no-repeat;
+  background-size: contain;
+  width: 59vw;
+  height: 70vh;
+  display: block;
+  align-self: center;
+  margin-top: 20px;
+}
+.google-play-badge {
+  background: url(../img/google-play.png) no-repeat;
+  background-size: contain;
+  width: 80vw;
+  height: 35vw;
+  max-width: 646px;
   display: block;
   margin: 0 auto;
 }
-
-.google-play-badge {
-  background: url(../img/en_badge_web_generic.png) no-repeat;
+.apple-store-badge {
+  background: url(../img/apple-store.svg) no-repeat;
   background-size: contain;
-  width: 90vw;
-  height: 40vw;
+  width: 80vw;
+  height: 35vw;
   max-width: 646px;
   display: block;
   margin: 0 auto;
@@ -148,18 +167,37 @@ h2 {
 .footer-container {
   background: #2a2d38;
   overflow: auto;
-  max-height: 20vh;
+  height: 10vh;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer-text {
   font-size: 0.8em;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
+@media only screen and (min-width: 370px) {
+  h2 {
+    font-size: 2.3em;
+  }
+  .mugshot-logo {
+    margin: 10px auto -25px auto
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  .mugshot-logo {
+    margin: 20px auto -35px auto
+  }
+}
 
 @media only screen and (min-width: 480px) {
 
@@ -177,24 +215,28 @@ h2 {
 @media only screen and (min-width: 600px) {   /*Background changes*/
   html {
       background: url(../img/phone-on-table-with-coffee.jpg) no-repeat 30% center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
       background-size: cover;
   }
 }
 
 @media only screen and (min-width: 768px) {
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
+  h2 {
+    align-self: center;
+  }
+  .wrapper {
+    width: 84%;
+    margin: 0 8%;
+  }
+  .page-third {
+    background: url(../img/phone-in-hand-with-coffee.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 1140px) {
