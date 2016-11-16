@@ -62,14 +62,18 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px 'Open sans', Helvetica, Helvetica Neue, Arial;
+    color: #222636;
+    font-weight: 300;
 }
 
 .wrapper {
     width: 90%;
     margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 /* ===============
     ALL: IE Fixes
@@ -82,17 +86,31 @@ body {
 /* ==========================================================================
     Custom styles
    ========================================================================== */
+
+h1 {
+  font-size: 3.1em;
+  font-weight: 300;
+  line-height: 1.2em;
+  color: white;
+  background: rgba(36,39,50,0.93);
+  padding: 10px;
+  font-weight: 300;
+}
+h2 {
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0;
+  /*text-align: center;*/
+}
 .page {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  min-height: 60vh;
 }
 .page-first {
-  display: flex;
   align-items: center;
-  justify-content: center;
-}
-.page-first h1,
-.page-first h3 {
-  text-align: center;
+  height: 100vh;
 }
 .page-second {
   background: rgba(255,255,255,0.9);
@@ -105,20 +123,37 @@ body {
   -o-background-size: cover;
   background-size: cover;
   overflow: auto;
+  padding-top: 30vh;
 }
 .mugshot-logo {
-  background: url(../img/mugshot-logo.png) no-repeat;
+  background: url(../img/mugshot-camera.png) no-repeat;
   background-size: contain;
-  width: 40vw;
-  height: 40vw;
-  max-width: 250px;
+  width: 70vw;
+  height: 53vw;
+  max-width: 400px;
   display: block;
   margin: 0 auto;
 }
+
+.google-play-badge {
+  background: url(../img/en_badge_web_generic.png) no-repeat;
+  background-size: contain;
+  width: 90vw;
+  height: 40vw;
+  max-width: 646px;
+  display: block;
+  margin: 0 auto;
+}
+
 .footer-container {
-  background: #333;
+  background: #2a2d38;
   overflow: auto;
+  max-height: 20vh;
   color: white;
+}
+.footer-text {
+  font-size: 0.8em;
+  font-weight: 400;
 }
 
 
@@ -142,6 +177,7 @@ body {
 @media only screen and (min-width: 600px) {   /*Background changes*/
   html {
       background: url(../img/phone-on-table-with-coffee.jpg) no-repeat 30% center fixed;
+      background-size: cover;
   }
 }
 
